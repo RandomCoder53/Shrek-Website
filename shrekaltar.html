@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <style>
+            body {
+                text-align: center;
+
+                background-image: url('Images/wavey2.png');
+                background-repeat: repeat; 
+                background-size: 2000px 2000px;
+                animation: scrollBackground 15s linear infinite;
+                font-family: 'alphafont';
+                font-weight: lighter;
+            }
+
+        </style>
+        <script>
+            var shrekpoints = 0
+            var donkeyupgradeamount = 0
+            function updatedisplay() {
+                document.getElementById("ShrekPoints").innerText = `Shrek Points: ${shrekpoints}`
+            }
+            function addpoints() {
+                shrekpoints += 1*(donkeyupgradeamount+1)
+                updatedisplay()
+            }
+            function buydonkey() {
+                if (donkeyupgradeamount >= 1) {
+                    var finalprice = 50*(11*donkeyupgradeamount)
+                }else {
+                    var finalprice = 500
+                }
+                if (shrekpoints >= finalprice/10) {
+                    shrekpoints -= finalprice/10
+                    donkeyupgradeamount += 1
+                    document.getElementById("donkeypricing").innerText = `Donkey: ${50 * (11*donkeyupgradeamount)/10}SP`
+                    updatedisplay()
+                }
+            }
+        </script>
+        <title>Shrek</title>
+        <link rel="stylesheet" href="style.css" type="text/css">
+    </head>
+    <body>
+        <h1 class="header">The Shrek Altar</h1>
+        <img id="ShrekStatue" src="Images/golden Shrek statue.png" onclick="addpoints()">
+        <img id="donkeyupgradedisplay" src="Images/Donkey_shrekUpgrade.webp">
+        <h1 class="header" id="ShrekPoints" style="transform: translate(0, 430px);">Shrek Points: 0</h1>
+
+        <div id="upgrades">
+            <button class="upgradebutton" onclick="buydonkey()">
+                <p id="donkeypricing">Donkey: 50SP</p>  
+                <p>+1x SP multiplier</p>
+            </button>
+        </div>
+
+    </body>
+</html>

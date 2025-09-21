@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <style>
+            body {
+                text-align: center;
+
+                background-image: url('Images/wavey2.png');
+                background-repeat: repeat; 
+                background-size: 2000px 2000px;
+                animation: scrollBackground 15s linear infinite;
+                font-family: 'alphafont';
+                font-weight: lighter;
+            }
+
+        </style>
+        <title>Shrek</title>
+        <link rel="stylesheet" href="style.css" type="text/css">
+        <script>
+            document.addEventListener('mousemove', function(e) {
+                document.getElementById('eye1').style.transform = `translate(${40*Math.sin((e.clientX-(window.innerWidth/2))/window.innerWidth)}px, ${30*Math.sin((e.clientY-(window.innerHeight/2))/window.innerHeight)+7}px)`
+                document.getElementById('eye2').style.transform = `translate(${40*Math.sin((e.clientX-(window.innerWidth/2))/window.innerWidth)}px, ${30*Math.sin((e.clientY-(window.innerHeight/2))/window.innerHeight)+3}px)`
+            });
+        </script>
+    </head>
+    <body>
+        <h1 class="header">SHREK!!!!</h1>
+        <div>
+            <div id="mainbuttons">
+                <button class="mainbutton" onclick="window.location.href='characters.html'">Characters</button>
+                <button class="mainbutton" onclick="window.location.href='shrekaltar.html'">Shrek Altar</button>
+                <button class="mainbutton">Videos</button>
+                <button class="mainbutton">Credits</button>
+            </div>
+        </div>
+        <img src="Images/shrekissocoolomg.png" alt="Where did shrek go D:" id="Shrek" style="position: fixed;">
+
+        <img src="Images/eyepupiliris.png" alt="eye" class="eye" id="eye1" style="position: fixed; top: 48%; margin-left: 50px;">
+        <img src="Images/eyepupiliris.png" alt="eye" class="eye" id="eye2" style="position: fixed; top: 46%; margin-left: -72px;">
+
+        <img src="Images/eyebackground2.jpg" alt="eyewhite" class="eyebackground" style="position: fixed; top: 46%; margin-left: -82px;">
+        <img src="Images/eyebackground2.jpg" alt="eyewhite" class="eyebackground" style="position: fixed; top: 49%; margin-left: 35px;">
+    </body>
+</html>

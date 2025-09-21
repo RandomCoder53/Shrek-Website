@@ -1,0 +1,188 @@
+@font-face {
+    font-family: 'alphafont';
+    src: url(Fonts/AlfaSlabOne-Regular.ttf);
+}
+
+@keyframes scrollBackground {
+  0% {
+    background-position: 0% 0;
+  }
+  100% {
+    background-position: 0 2000px;
+  }
+}
+
+body {
+    background-color: rgb(21, 80, 0);
+}
+
+.header {
+    color: rgb(0, 255, 0);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal;
+}
+
+.mainbutton {
+    text-align: center;
+    border: none;
+    border-radius: 6px;
+    width: 160px;
+    height: 50px;
+    box-shadow: none;
+    outline: solid;
+    background-color: rgb(168, 95, 32);
+    outline-color: rgb(108, 59, 0);
+    color: rgb(79, 44, 0);
+    margin-left: 40px;
+    margin-right: 40px;
+    font-family: 'alphafont';
+    font-size: 120%;
+    font-weight: lighter;
+    transition: 0.2s;
+}
+
+#characterdisplay {
+    line-height: 30px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+    border: none;
+    border-radius: 6px;
+    width: 500px;
+    height: 480px;
+    outline: solid;
+    outline-width: 6px;
+    background-color: rgb(168, 95, 32);
+    outline-color: rgb(108, 59, 0);
+    color: rgb(79, 44, 0);
+}
+
+#mainbuttons {
+    margin: auto;
+    display: block;
+    align-items: center;
+}
+
+.mainbutton:hover {
+    width: 176px;
+    height: 55px;
+    transition: 0.2s;
+}
+
+.eye {
+    pointer-events: none;
+    height: 7%;
+    z-index: 3;
+}
+.eyebackground {
+    pointer-events: none;
+    height: 12%;
+    z-index: 2;
+}
+
+#Shrek {
+    z-index: 10;
+    pointer-events: none;
+    margin: 0 auto;
+    top: 23%;
+    left: 50%;
+    margin-top: -100px;
+    margin-left: -460px;
+}
+
+#characterheader {
+    font-size: 170%;
+    line-height: 20px;
+}
+
+#characterparagraph {
+    font-size: 140%;
+}
+
+.arrows {
+    display: inline-block;
+    position: absolute;
+    border: none;
+    border-radius: 6px;
+    width: 110px;
+    height: 110px;
+    box-shadow: none;
+    outline: solid;
+    outline-width: 6px;
+    background-color: rgb(168, 95, 32);
+    outline-color: rgb(108, 59, 0);
+    color: rgb(79, 44, 0);
+    transition: 0.2s;
+}
+
+.arrows:hover {
+    background-color: rgb(191, 108, 36);
+    transition: 0.2s;
+}
+
+#ShrekStatue {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 250x;
+    height: 375px;
+    transition: 0.2s;
+}
+
+#ShrekStatue:hover {
+    width: 275x;
+    height: 402px;
+    transition: 0.2s;
+}
+
+#ShrekStatue:active {
+    width: 260;
+    height: 390px;
+    transition: 0s;
+}
+
+#upgrades {
+    line-height: 30px;
+    position: absolute;
+    left: 50%;
+    transform: translate(170px, -17%);
+    border: none;
+    border-radius: 6px;
+    width: 250px;
+    height: 420px;
+    outline: solid;
+    outline-width: 6px;
+    background-color: rgb(168, 95, 32);
+    outline-color: rgb(108, 59, 0);
+    color: rgb(79, 44, 0);
+}
+
+.upgradebutton {
+    display: block;
+    position: absolute;
+    border: none;
+    border-radius: 6px;
+    width: 80%;
+    height: 90px;
+    box-shadow: none;
+    outline: solid;
+    outline-width: 6px;
+    line-height: 5px;
+    left: 10%;
+    margin-top: 7%;
+
+    font-family: 'alphafont';
+    font-weight: lighter;
+    font-size: 120%;
+    background-color: rgb(168, 95, 32);
+    outline-color: rgb(108, 59, 0);
+    color: rgb(79, 44, 0);
+    transition: 0.2s;
+}
+
+.upgradebutton:hover {
+    background-color: rgb(191, 108, 36);
+    transition: 0.2s;
+}

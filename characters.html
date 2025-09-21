@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <style>
+            body {
+                text-align: center;
+
+                background-image: url('Images/wavey2.png');
+                background-repeat: repeat; 
+                background-size: 2000px 2000px;
+                animation: scrollBackground 15s linear infinite;
+                font-family: 'alphafont';
+                font-weight: lighter;
+            }
+
+        </style>
+        <script>
+            var currentchar = 1
+            function leftbutton() {
+                currentchar -= 1
+                if (currentchar > 3) {
+                    currentchar = 1
+                }
+                if (currentchar < 1) {
+                    currentchar = 3
+                }
+                changechar()
+            }
+            function rightbutton() {
+                currentchar += 1
+                if (currentchar > 3) {
+                    currentchar = 1
+                }
+                if (currentchar < 1) {
+                    currentchar = 3
+                }
+                changechar()
+            }
+            function changechar() {
+                if (currentchar == 1) {
+                     document.getElementById("characterimage").src = "Images/shrekimg.jpg"
+                    document.getElementById("characterheader").innerHTML = "Shrek"
+                    document.getElementById("characterparagraph").innerHTML = "The main man himself! <br> A green and mean looking ogre <br> that spent most of his life living alone in his swamp. Later, on his way to get his swamp back, he ended up  growing as a person and meeting future friends and family."
+                }
+                if (currentchar == 2) {
+                     document.getElementById("characterimage").src = "Images/donkeyimg.jpg"
+                    document.getElementById("characterheader").innerHTML = "Donkey"
+                    document.getElementById("characterparagraph").innerHTML = "Donkey is the optimistic, talkative, and high energy sidekick of Shrek that he met while on the quest to save his swamp. Although Shrek found donkey annoying for most of the movie, they eventually became good friends."
+                }
+                if (currentchar == 3) {
+                     document.getElementById("characterimage").src = "Images/fiona.jpg"
+                    document.getElementById("characterheader").innerHTML = "Fiona"
+                    document.getElementById("characterparagraph").innerHTML = "A kind yet strong princess with the curse to turn into an ogre each night. She takes the role of a love interest and wife for shrek, which helped shrek develop as an ogre and Fiona accept her ogre form. <br> <br>"
+                }
+            }
+        </script>
+        <title>Shrek</title>
+        <link rel="stylesheet" href="style.css" type="text/css">
+    </head>
+    <body>
+        <h1 class="header">Characters</h1>
+
+        <button class="arrows" style="position: absolute; top: 50%; transform: translate(280px, 0);"><img src="Images/funny arrow.png" style="width: 100px;" onclick="rightbutton();"></button>
+        <button class="arrows" style="position: absolute; top: 50%; transform: translate(-390px, 0);"><img src="Images/funny arrow.png" style="width: 100px; transform: rotate(180deg);" onclick="leftbutton();"></button>
+
+        <div id="characterdisplay">
+            <h1 id="characterheader">Shrek</h1>
+            <p id="characterparagraph">The main man himself! <br> A green and mean looking ogre <br> that spent most of his life living alone in his swamp. On his way to get his swamp back, he ended up  growing as a person and meeting future friends and family.</p>
+            <img id="characterimage" src="Images/shrekimg.jpg" style="width: 60%;">
+        </div>
+    </body>
+</html>
