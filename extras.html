@@ -48,6 +48,7 @@
                     }
                     document.getElementById("characterheader").innerHTML = "Do It Yourself"
                     document.getElementById("characterparagraph").innerHTML = "As for any website; html, css, and javascript are used to make everything function. If you want to make your own website in this way, I reccomend using VScode. I would also reccomend making <br> a GitHub repo and hosting your website on something with free domains like Cloudflare."
+                    document.getElementById("mygitpage").style = "visibility: hidden;"
                 }
                 if (page == 2) {
                     const collection2 = document.getElementsByClassName("extraimage");
@@ -60,6 +61,7 @@
                     }
                     document.getElementById("characterheader").innerHTML = "My Coding (Messy)"
                     document.getElementById("characterparagraph").innerHTML = ""
+                    document.getElementById("mygitpage").style = "visibility: visible;"
                 }
             }
         </script>
@@ -68,9 +70,9 @@
     </head>
     <body>
         <h1 class="header">Extras</h1>
-        <a href="home.html" style="color: rgb(255, 230, 0);">Back to home</a>
+        <a href="home.html" id="goback">Back to home</a>
         <button class="arrows" style="position: absolute; top: 50%; transform: translate(280px, 0);"><img src="Images/funny arrow.png" style="width: 100px;" onclick="rightbutton();"></button>
-        <button class="arrows" style="position: absolute; top: 50%; left: 50%; transform: translate(-450px, 0);"><img src="Images/funny arrow.png" style="width: 100px; transform: rotate(180deg);" onclick="leftbutton();"></button>
+        <button class="arrows" style="position: absolute; top: 50%; left: 50%; transform: translate(-390px, 0);"><img src="Images/funny arrow.png" style="width: 100px; transform: rotate(180deg);" onclick="leftbutton();"></button>
 
         <div id="characterdisplay">
             <h1 id="characterheader">Do It Yourself</h1>
@@ -80,9 +82,9 @@
             <a href="https://github.com/" class="extralinks">GitHub (For hosting code and project management)</a>
             <br>
             <a href="https://www.cloudflare.com/" class="extralinks">Cloudflare (For obtaining a free or paid domain)</a>
-            <img src="Images/code1.png" style="position: absolute; top: 50%; left: 50%; transform: translate(-230px, -180px); width: 200px; visibility: hidden;" class="extraimage">
-            <img src="Images/code2.png" style="position: absolute; top: 50%; left: 50%; transform: translate(30px, -180px); width: 200px; height: 253px; visibility: hidden;" class="extraimage">
-            <a href="https://github.com/RandomCoder53/Shrek-Website">My GitHub page</a>
+            <img src="Images/code1.png" style="position: absolute; top: 50%; left: 50%; transform: translate(-230px, -165px); width: 200px; visibility: hidden;" class="extraimage">
+            <img src="Images/code2.png" style="position: absolute; top: 50%; left: 50%; transform: translate(30px, -165px); width: 200px; height: 253px; visibility: hidden;" class="extraimage">
+            <a href="https://github.com/RandomCoder53/Shrek-Website" id="mygitpage">My GitHub page (Files for the website)</a>
         </div>
     </body>
 </html>

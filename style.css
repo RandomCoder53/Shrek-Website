@@ -228,3 +228,24 @@ h1, h2, h3, h4, h5, h6 {
     width: 225x;
     height: 337px;
 }
+
+#mygitpage {
+    visibility: hidden;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 120px);
+}
+
+#goback {
+    color: rgb(0, 255, 0);
+    text-decoration: none;
+    font-size: 130%;
+    position: absolute;
+    top: 50%;
+    -webkit-text-stroke: 1.2px black;
+    transform: translate(-50%, 310px);
+}
+#goback:hover {
+    color: rgb(255, 255, 255);
+}
