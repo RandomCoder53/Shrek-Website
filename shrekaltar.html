@@ -5,9 +5,9 @@
             body {
                 text-align: center;
 
-                background-image: url('Images/wavey2.png');
+                background-image: url('Images/wave-smooth-vertical.jpg');
                 background-repeat: repeat; 
-                background-size: 2000px 2000px;
+                background-size: 500px 250px;
                 animation: scrollBackground 15s linear infinite;
                 font-family: 'alphafont';
                 font-weight: lighter;
@@ -17,23 +17,61 @@
         <script>
             var shrekpoints = 0
             var donkeyupgradeamount = 0
+            var fionaupgradeamount = 0
+            var cerupgradeamount = 0
             function updatedisplay() {
                 document.getElementById("ShrekPoints").innerText = `Shrek Points: ${shrekpoints}`
             }
             function addpoints() {
-                shrekpoints += 1*(donkeyupgradeamount+1)
+                shrekpoints += 1*(fionaupgradeamount+1)
                 updatedisplay()
             }
+            function myFunction() {
+                shrekpoints += donkeyupgradeamount
+                updatedisplay()
+            }
+            const intervalID = setInterval(myFunction, 500);
             function buydonkey() {
                 if (donkeyupgradeamount >= 1) {
-                    var finalprice = 50*(11*donkeyupgradeamount)
+                    var finalprice = 50*(7*(donkeyupgradeamount+1))
                 }else {
                     var finalprice = 500
                 }
                 if (shrekpoints >= finalprice/10) {
+                    document.getElementById("donkeyupgradedisplay").style = "visibility: visible;"
                     shrekpoints -= finalprice/10
                     donkeyupgradeamount += 1
-                    document.getElementById("donkeypricing").innerText = `Donkey: ${50 * (11*donkeyupgradeamount)/10}SP`
+                    document.getElementById("donkeypricing").innerText = `Donkey: ${50 * (7*(donkeyupgradeamount+1))/10}SP`
+                    updatedisplay()
+                }
+            }
+            function buyfiona() {
+                if (fionaupgradeamount >= 1) {
+                    var finalprice = 300 *(8*(fionaupgradeamount+1))
+                }else {
+                    var finalprice = 3000
+                }
+                if (shrekpoints >= finalprice/10) {
+                    document.getElementById("fionaupgradedisplay").style = "visibility: visible;"
+                    shrekpoints -= finalprice/10
+                    fionaupgradeamount += 1
+                    document.getElementById("fionapricing").innerText = `Fiona: ${300 * (8*(fionaupgradeamount+1))/10}SP`
+                    updatedisplay()
+                }
+            }
+            function buycer() {
+                if (cerupgradeamount >= 1) {
+                    var finalprice = 1200 *(11*(cerupgradeamount+1))
+                }else {
+                    var finalprice = 12000
+                }
+                if (shrekpoints >= finalprice/10) {
+                    document.body.style = "background-image: url('Images/ceryay.jpg');"
+                    shrekpoints -= finalprice/10
+                    cerupgradeamount += 1
+                    document.getElementById("cerpricing").innerText = `CER: ${1200 * (11*(fionaupgradeamount+1))/10}SP`
+                    clearInterval(intervalID);
+                    intervalID = setInterval(myFunction, 500/(cerupgradeamount+1));
                     updatedisplay()
                 }
             }
@@ -43,16 +81,26 @@
     </head>
     <body>
         <h1 class="header">The Shrek Altar</h1>
+        <h1 class="warning">Progress doesn't save</h1>
         <img id="ShrekStatue" src="Images/golden Shrek statue.png" onclick="addpoints()">
         <img id="donkeyupgradedisplay" src="Images/Donkey_shrekUpgrade.webp">
-        <h1 class="header" id="ShrekPoints" style="transform: translate(0, 430px);">Shrek Points: 0</h1>
+        <img id="fionaupgradedisplay" src="Images/Princess_FionaUpgradeDisplay.png">
+        <h1 class="header" id="ShrekPoints" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, 450%);">Shrek Points: 0</h1>
 
         <div id="upgrades">
-            <button class="upgradebutton" onclick="buydonkey()">
+            <button class="upgradebutton" onclick="buydonkey()" style="margin-top: 12.5%;">
                 <p id="donkeypricing">Donkey: 50SP</p>  
-                <p>+1x SP multiplier</p>
+                <p>+1 SP automation</p>
+            </button>
+            <button class="upgradebutton" onclick="buyfiona()" style="margin-top: 65%;">
+                <p id="fionapricing">Fiona: 300SP</p>  
+                <p>+1 SP multiplier</p>
+            </button>
+            <button class="upgradebutton" onclick="buycer()" style="margin-top: 117.5%;">
+                <p id="cerpricing">CER: 1200SP</p>  
+                <p>+1 automation <br> <br> <br> <br> speed multiplier</p>
             </button>
         </div>
-
+        
     </body>
 </html>

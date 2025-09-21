@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <style>
+            body {
+                text-align: center;
+
+                background-image: url('Images/wave-smooth-vertical.jpg');
+                background-repeat: repeat; 
+                background-size: 500px 250px;
+                animation: scrollBackground 15s linear infinite;
+                font-family: 'alphafont';
+                font-weight: lighter;
+            }
+
+        </style>
+        <script>
+            var page = 1
+            function leftbutton() {
+                page -= 1
+                if (page > 2) {
+                    page = 1
+                }
+                if (page < 1) {
+                    page = 2
+                }
+                changechar()
+            }
+            function rightbutton() {
+                page += 1
+                if (page > 2) {
+                    page = 1
+                }
+                if (page < 1) {
+                    page = 2
+                }
+                changechar()
+            }
+            function changechar() {
+                if (page == 1) { 
+                    const collection = document.getElementsByClassName("extralinks");
+                    for (let i = 0; i < collection.length; i++) {
+                    collection[i].style.visibility = "visible";
+                    }
+                    const collection2 = document.getElementsByClassName("extraimage");
+                    for (let i = 0; i < collection2.length; i++) {
+                    collection2[i].style.visibility = "hidden";
+                    }
+                    document.getElementById("characterheader").innerHTML = "Do It Yourself"
+                    document.getElementById("characterparagraph").innerHTML = "As for any website; html, css, and javascript are used to make everything function. If you want to make your own website in this way, I reccomend using VScode. I would also reccomend making <br> a GitHub repo and hosting your website on something with free domains like Cloudflare."
+                }
+                if (page == 2) {
+                    const collection2 = document.getElementsByClassName("extraimage");
+                    for (let i = 0; i < collection2.length; i++) {
+                    collection2[i].style.visibility = "visible";
+                    }
+                    const collection = document.getElementsByClassName("extralinks");
+                    for (let i = 0; i < collection.length; i++) {
+                    collection[i].style.visibility = "hidden";
+                    }
+                    document.getElementById("characterheader").innerHTML = "My Coding (Messy)"
+                    document.getElementById("characterparagraph").innerHTML = ""
+                }
+            }
+        </script>
+        <title>Shrek</title>
+        <link rel="stylesheet" href="style.css" type="text/css">
+    </head>
+    <body>
+        <h1 class="header">Extras</h1>
+        <a href="home.html" style="color: rgb(255, 230, 0);">Back to home</a>
+        <button class="arrows" style="position: absolute; top: 50%; transform: translate(280px, 0);"><img src="Images/funny arrow.png" style="width: 100px;" onclick="rightbutton();"></button>
+        <button class="arrows" style="position: absolute; top: 50%; left: 50%; transform: translate(-450px, 0);"><img src="Images/funny arrow.png" style="width: 100px; transform: rotate(180deg);" onclick="leftbutton();"></button>
+
+        <div id="characterdisplay">
+            <h1 id="characterheader">Do It Yourself</h1>
+            <p id="characterparagraph">As for any website; html, css, and javascript are used to make everything function. If you want to make your own website in this way, I reccomend using VScode. I would also reccomend making <br> a GitHub repo and hosting your website on something with free domains like Cloudflare.</p>
+            <a href="https://vscode.dev/" class="extralinks">VScode (For HTML, CSS, and JS)</a>
+            <br>
+            <a href="https://github.com/" class="extralinks">GitHub (For hosting code and project management)</a>
+            <br>
+            <a href="https://www.cloudflare.com/" class="extralinks">Cloudflare (For obtaining a free or paid domain)</a>
+            <img src="Images/code1.png" style="position: absolute; top: 50%; left: 50%; transform: translate(-230px, -180px); width: 200px; visibility: hidden;" class="extraimage">
+            <img src="Images/code2.png" style="position: absolute; top: 50%; left: 50%; transform: translate(30px, -180px); width: 200px; height: 253px; visibility: hidden;" class="extraimage">
+            <a href="https://github.com/RandomCoder53/Shrek-Website">My GitHub page</a>
+        </div>
+    </body>
+</html>
