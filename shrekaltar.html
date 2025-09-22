@@ -30,7 +30,7 @@
                 shrekpoints += donkeyupgradeamount
                 updatedisplay()
             }
-            const intervalID = setInterval(myFunction, 500);
+            var intervalID = setInterval(myFunction, 500);
             function buydonkey() {
                 if (donkeyupgradeamount >= 1) {
                     var finalprice = 50*(7*(donkeyupgradeamount+1))
