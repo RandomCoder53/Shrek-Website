@@ -69,9 +69,9 @@
                     document.body.style = "background-image: url('Images/ceryay.jpg');"
                     shrekpoints -= finalprice/10
                     cerupgradeamount += 1
-                    document.getElementById("cerpricing").innerText = `CER: ${1200 * (11*(fionaupgradeamount+1))/10}SP`
+                    document.getElementById("cerpricing").innerText = `CER: ${1200 * ((11*(cerupgradeamount+1)))/10}SP`
                     clearInterval(intervalID);
-                    intervalID = setInterval(myFunction, 500/(cerupgradeamount+1));
+                    intervalID = setInterval(myFunction, Math.round(500/(cerupgradeamount+1)));
                     updatedisplay()
                 }
             }

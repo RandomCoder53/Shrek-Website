@@ -152,7 +152,7 @@ h1, h2, h3, h4, h5, h6 {
 #ShrekStatue:hover {
     width: 275x;
     height: 402px;
-    transition: 0.2s;
+    transition: 0.2s ease-out;
 }
 
 #ShrekStatue:active {
