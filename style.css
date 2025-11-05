@@ -246,6 +246,53 @@ h1, h2, h3, h4, h5, h6 {
     -webkit-text-stroke: 1.2px black;
     transform: translate(-50%, 310px);
 }
+
 #goback:hover {
     color: rgb(255, 255, 255);
+}
+
+#assignmentdisplay {
+    line-height: 30px;
+    position: absolute;
+    width: 500px;
+    height: 520px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -40%);
+    border: none;
+    border-radius: 6px;
+    outline: solid;
+    outline-width: 6px;
+    background-color: rgb(168, 95, 32);
+    outline-color: rgb(108, 59, 0);
+    color: rgb(79, 44, 0);
+}
+
+#assignmentlink {
+    line-height: 70px;
+    color: rgb(255, 251, 0);
+    text-decoration: none;
+    font-size: 180%;
+    -webkit-text-stroke: 1.5px black;
+}
+
+#assignmentlink:hover {
+    color: rgb(255, 255, 255);
+}
+
+#reviewdisplay {
+    line-height: 30px;
+    position: absolute;
+    width: 560px;
+    height: 1040px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -40%);
+    border: none;
+    border-radius: 6px;
+    outline: solid;
+    outline-width: 6px;
+    background-color: rgb(168, 95, 32);
+    outline-color: rgb(108, 59, 0);
+    color: rgb(79, 44, 0);
 }
